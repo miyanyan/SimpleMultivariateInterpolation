@@ -21,8 +21,8 @@ HotPlot::HotPlot(QWidget *parent, int contourCnt, InterpolationMethod method)
     //读取64通道电极点位置并决定是否显示通道、通道名
     readChannelAxisFile(":/channelAxis.csv");
     drawElements();
-    showChannelCircle(true);
-    showChannelName(true);
+    showChannelCircle(false);
+    showChannelName(false);
     //初始化要显示的通道数,默认显示所有的导联
     m_usedChannels.resize(m_channelAxis.size());
     for(int i = 0; i < m_usedChannels.size(); ++i){
